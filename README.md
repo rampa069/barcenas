@@ -1,6 +1,6 @@
 
 BARCENAS FILE WIPER
-===================
+-------------------
 
 
  This tool is similar to the unix coreutils shreed command, but uses openssl to generate good cryptographic random data 
@@ -10,13 +10,13 @@ to overwrite the file.
 file gets zeroed, it is removed from the filesystem.
 
 USAGE
-=====
+-----
 
  ./barcenas.sh filename
 
 
 BACKGROUND
-==========
+----------
 
  In The past, there were file and disk erasers using the Guttman Method. The Gutmann method is an algorithm for securely erasing 
 the contents of computer hard drives, such as files. Devised by Peter Gutmann and Colin Plumb, it does so by writing 
@@ -31,3 +31,7 @@ Relatively modern drives no longer use these older encoding techniques, making m
 irrelevent.[1] Moreover, since about 2001, ATA IDE and SATA hard drive manufacturer designs include support for the “Secure Erase” 
 standard, obviating the need to apply the Gutmann method when erasing an entire drive.
 
+License:
+--------
+
+- GPLv2, view the LICENSE file.
