@@ -3,7 +3,7 @@ BARCENAS FILE WIPER
 ===================
 
 
- This tool is similar to the unix coreutils shreed command, but uses openssl to generate goo cryptographic random data 
+ This tool is similar to the unix coreutils shreed command, but uses openssl to generate good cryptographic random data 
 to overwrite the file.
 
  After three passes with random data, it fills the file with zeros. so, nobody knows if there were data before. After the
@@ -18,7 +18,7 @@ USAGE
 BACKGROUND
 ==========
 
- In The past, there were files using the Guttman Method. The Gutmann method is an algorithm for securely erasing 
+ In The past, there were file and disk erasers using the Guttman Method. The Gutmann method is an algorithm for securely erasing 
 the contents of computer hard drives, such as files. Devised by Peter Gutmann and Colin Plumb, it does so by writing 
 a series of 35 patterns over the region to be erased.
 

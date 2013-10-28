@@ -26,23 +26,23 @@ FILENAME=$1
 FILESIZE=$(stat -c%s "$FILENAME")
 #
 #
-echo -e "Size of file $FILENAME is $FILESIZE bytes." "\t\t\t\t\t\t$C_G[ OK ]$C_END"
+echo -e "Size of file $FILENAME is $FILESIZE bytes.                    " "\t\t$C_G[ OK ]$C_END"
 #
-echo -n "Generating $FILESIZE of cryptographic random numbers. (first pass)"
+echo -n "Generating $FILESIZE cryptographic random bytes. (first pass) "
 openssl rand $FILESIZE -out $FILENAME
 echo -e "\t\t$C_G[ OK ]$C_END"
 #
-echo -n "Generating $FILESIZE of cryptographic random numbers. (second pass)"
+echo -n "Generating $FILESIZE cryptographic random bytes. (second pass)"
 openssl rand $FILESIZE -out $FILENAME
 echo -e "\t\t$C_G[ OK ]$C_END"
 #
-echo -n "Generating $FILESIZE of cryptographic random numbers. (third pass)"
+echo -n "Generating $FILESIZE cryptographic random bytes. (third pass) "
 openssl rand $FILESIZE -out $FILENAME
 echo -e "\t\t$C_G[ OK ]$C_END"
 #
-echo -n "Generating $FILESIZE of zeros. (final pass )"
+echo -n "Generating $FILESIZE of zeros. (final pass )                  "
 dd if=/dev/zero count=1 bs=$FILESIZE of=$FILENAME 2> /dev/null
-echo -e "\t\t\t\t\t$C_G[ OK ]$C_END"
+echo -e "\t\t$C_G[ OK ]$C_END"
 
 echo "Erasing th file....."
 rm $FILENAME
